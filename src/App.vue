@@ -5,7 +5,7 @@
 </style>
 <template>
   <div id="app">
-    <Users/>
+    <users></users>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ import Users from './components/Users';
 export default {
   name: 'app',
   components: {
-  	Users
+  	Users,
   },
 };
 </script>
