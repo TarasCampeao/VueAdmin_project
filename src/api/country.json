@@ -1,0 +1,382 @@
+[
+  {
+    "country": "Poland",
+    "location": "Warsaw",
+    "year": "2014"
+  },
+  {
+    "country": "Poland",
+    "location": "Lublin",
+    "year": "2014"
+  },
+  {
+    "country": "Belarus",
+    "location": "Brest",
+    "year": "2014"
+  },
+  {
+    "country": "Netherlands",
+    "location": "Amsterdam",
+    "year": "2014"
+  },
+  {
+    "country": "Czech Republic",
+    "location": "Prague",
+    "year": "2015"
+  },
+  {
+    "country": "Poland",
+    "location": "Gdansk",
+    "year": "2015"
+  },
+  {
+    "country": "Poland",
+    "location": "Krakow",
+    "year": "2015"
+  },
+  {
+    "country": "Poland",
+    "location": "Zakopane",
+    "year": "2015"
+  },  
+  {
+    "country": "Germany",
+    "location": "Berlin",
+    "year": "2015"
+  },
+  {
+    "country": "Austria",
+    "location": "Wien",
+    "year": "2015"
+  },
+  {
+    "country": "Austria",
+    "location": "Salzburg",
+    "year": "2015"
+  },
+  {
+    "country": "Austria",
+    "location": "Innsbruck",
+    "year": "2015"
+  },
+  {
+    "country": "Slovakia",
+    "location": "Bratislava",
+    "year": "2015"
+  },    
+  {
+    "country": "Hungary",
+    "location": "Budapest",
+    "year": "2015"
+  },
+  {
+    "country": "Lithuania",
+    "location": "Kaunas",
+    "year": "2016"
+  },  
+  {
+    "country": "Riga",
+    "location": "Latvia",
+    "year": "2016"
+  },
+  {
+    "country": "Tallinn",
+    "location": "Estonia",
+    "year": "2016"
+  },  
+  {
+    "country": "Helsinki",
+    "location": "Finland",
+    "year": "2016"
+  }, 
+  {
+    "country": "Spain",
+    "location": "Barcelona",
+    "year": "2016"
+  }, 
+  {
+    "country": "Spain",
+    "location": "Manresa",
+    "year": "2016"
+  },    
+  {
+    "country": "Andorra",
+    "location": "Andorra la Vella",
+    "year": "2016"
+  },    
+  {
+    "country": "France",
+    "location": "Perpingan",
+    "year": "2016"
+  },
+  {
+    "country": "France",
+    "location": "Montpelier",
+    "year": "2016"
+  },
+  {
+    "country": "France",
+    "location": "Marseille",
+    "year": "2016"
+  },
+  {
+    "country": "France",
+    "location": "Lyon",
+    "year": "2016"
+  },
+  {
+    "country": "France",
+    "location": "Paris",
+    "year": "2016"
+  },
+  {
+    "country": "France",
+    "location": "Meaux",
+    "year": "2016"
+  },
+  {
+    "country": "Luxembourg",
+    "location": "Luxembourg",
+    "year": "2016"
+  },
+  {
+    "country": "Luxembourg",
+    "location": "Luxembourg",
+    "year": "2016"
+  },
+  {
+    "country": "Belgium",
+    "location": "Liege",
+    "year": "2016"
+  },
+  {
+    "country": "Norway",
+    "location": "Oslo",
+    "year": "2017"
+  },
+  {
+    "country": "Danmark",
+    "location": "Copenhagen",
+    "year": "2017"
+  },
+  {
+    "country": "Sweden",
+    "location": "Stockholm",
+    "year": "2017"
+  },
+  {
+    "country": "Sweden",
+    "location": "Neder-Soderby",
+    "year": "2017"
+  },
+  {
+    "country": "Sweden",
+    "location": "Neder-Soderby",
+    "year": "2017"
+  },
+  {
+    "country": "Sweden",
+    "location": "Neder-Soderby",
+    "year": "2017"
+  },
+  {
+    "country": "Switzerland",
+    "location": "Lugano",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Como",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Milan",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Florence",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Pisa",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Rome",
+    "year": "2017"
+  },
+  {
+    "country": "Vatican City State",
+    "location": "Vatican",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Ostia",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Pescara",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Rimini",
+    "year": "2017"
+  },
+  {
+    "country": "San-Marino",
+    "location": "San-Marino",
+    "year": "2017"
+  },
+  {
+    "country": "Italy",
+    "location": "Venezia",
+    "year": "2017"
+  },
+  {
+    "country": "Malta",
+    "location": "Valletta",
+    "year": "2018"
+  },
+  {
+    "country": "Malta",
+    "location": "Sliema",
+    "year": "2018"
+  },
+  {
+    "country": "Malta",
+    "location": "Mdina",
+    "year": "2018"
+  },
+  {
+    "country": "Malta",
+    "location": "Saint Jullians",
+    "year": "2018"
+  },
+  {
+    "country": "Malta",
+    "location": "Marsaxlokk",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Faro",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Albufeira",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Lisbon",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Cascais",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Estoril",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Sintra",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Porto",
+    "year": "2018"
+  },
+  {
+    "country": "Portugal",
+    "location": "Vila Nova de Gaia",
+    "year": "2018"
+  },
+  {
+    "country": "Roumania",
+    "location": "Timisoara",
+    "year": "2018"
+  },
+  {
+    "country": "Serbia",
+    "location": "Belgrad",
+    "year": "2018"
+  },
+  {
+    "country": "Montenegro",
+    "location": "Herceg Novi",
+    "year": "2018"
+  },
+  {
+    "country": "Montenegro",
+    "location": "Budva",
+    "year": "2018"
+  },
+  {
+    "country": "Croatia",
+    "location": "Dubrovnik",
+    "year": "2018"
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "location": "Trebine",
+    "year": "2018"
+  },
+  {
+    "country": "Albania",
+    "location": "Shkoder",
+    "year": "2018"
+  },
+  {
+    "country": "Albania",
+    "location": "Fushe Arrez",
+    "year": "2018"
+  },
+  {
+    "country": "Albania",
+    "location": "Kukes",
+    "year": "2018"
+  },
+  {
+    "country": "Kosovo",
+    "location": "Prizren",
+    "year": "2018"
+  },
+  {
+    "country": "Kosovo",
+    "location": "Prishtina",
+    "year": "2018"
+  },
+  {
+    "country": "Macedonia",
+    "location": "Skopje",
+    "year": "2018"
+  },
+  {
+    "country": "Bulgaria",
+    "location": "Sofia",
+    "year": "2018"
+  },
+  {
+    "country": "Roumania",
+    "location": "Bucharest",
+    "year": "2018"
+  },
+  {
+    "country": "Moldova",
+    "location": "Chisinau",
+    "year": "2018"
+  },
+]
