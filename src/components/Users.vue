@@ -1,12 +1,18 @@
 <template>
 	<div class="container">
-		<ul class="name_list">
-			<li v-for="item in items" :key="item.id">
-				<div class="country_address">{{ item.name }}</div>
-				<div class="location_address">{{ item.location }}</div>
-				<div class="currency_address">{{ item.currency }}</div>
-			</li>
-		</ul>
+		<div class="about_zone" v-for="item in items" :key="item.id">
+		  <div class="main_data">
+		      <ul class="info_list">
+		        <li>{{ item.name }}</li>
+		        <li>{{ item.location }}</li>
+		        <li>{{ item.currency }}</li>
+		      </ul>
+		      <div class="btn_group">
+		        <button class="btn_standard edit_btn">Edit</button>
+		        <button class="btn_standard see_more">See more</button>
+		      </div>
+	      </div>
+	    </div>
 	</div>
 </template>
 
