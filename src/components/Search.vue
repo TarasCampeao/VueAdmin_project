@@ -1,6 +1,6 @@
 <template>
 	<div class="search">
-      <input type="text" v-model="search" @input="filteredInfo" placeholder="Search" class="search_cell" />
+      <input type="text" v-model="searchItem" placeholder="Search" class="search_cell" />
 	</div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
   data () {
     return {
     	items: fetchData,
-    	search: ''
+    	searchItem: '',
+    	fetchData: ''
     }
   },
   // methods: {
@@ -26,6 +27,13 @@ export default {
   //     //this.total = this.items.reduce((sum, item) => sum + item.currency, 0);
   //   },
   // }
+  methods: {
+  	filteredInfo() {
+      return this.items.filter(item => {
+      	return item.toLowerCase().indexOf(this.searchItem.toLowerCase()) !== -1
+      })
+  	}
+  }
 };
 
 </script>
