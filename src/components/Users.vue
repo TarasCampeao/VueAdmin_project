@@ -1,8 +1,7 @@
 <template>
 	<div class="container">
-		<!-- <search></search> -->
 		<div class="search">
-	      <input type="text" name="search" placeholder="Search" @input="filteredInfo">
+	      <input class="find_element" type="text" name="search" placeholder="Search" @input="filteredInfo">
 		</div>
 		<div class="about_zone" v-for="item in items" :key="item.id">
 		  <div class="main_data">
@@ -23,12 +22,11 @@
 
 <script>
 import fetchData from '../api/test.json';
-//import Search from './Search.vue'
 
 export default {
 	name: 'Users',
 	components: {
-		//Search,
+
 	},
 	data() {
 		return {
