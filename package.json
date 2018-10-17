@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "admin_vue",
   "version": "1.0.0",
   "description": "test project",
   "author": "Stanislav Sak",
@@ -73,5 +73,13 @@
     "not ie <= 8"
   ],
   "main": "test.js",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TarasCampeao/VueAdmin_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TarasCampeao/VueAdmin_project/issues"
+  },
+  "homepage": "https://github.com/TarasCampeao/VueAdmin_project#readme"
 }
