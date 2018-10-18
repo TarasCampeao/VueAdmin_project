@@ -4,20 +4,20 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 
-import DetailPage from './components/DetailPage.vue';
+import Detail from './components/Detail.vue';
 import Users from './components/Users.vue';
 
 
 Vue.config.productionTip = false;
-Vue.component('detail-page', DetailPage)
+Vue.component('detail', Detail)
 
 Vue.use(VueRouter)
 
 var router = new VueRouter ({
 	mode: 'history',
 	routes: [
-		{path: '/detail-page/:id', name: 'detail-page', component: DetailPage},
-		{path: '/', component: App}
+		{path: '/', component: Users},
+		{path: '/detail/:id', name: 'item', component: Detail }
 	]
 })
 
@@ -26,5 +26,5 @@ new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
-  router: router,
+  router: router
 });

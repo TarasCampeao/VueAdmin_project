@@ -5,18 +5,16 @@
 </style>
 <template>
   <div id="app">
-    <users></users>
+    <!-- <users></users> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Users from './components/Users';
+//import Detail from './components/Detail.vue';
 
 export default {
-  name: 'app',
-  components: {
-  	Users,
-  },
+  name: 'App',
 };
 </script>
 
