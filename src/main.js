@@ -5,6 +5,7 @@ import App from './App';
 import VueRouter from 'vue-router';
 
 import DetailPage from './components/DetailPage.vue';
+import Users from './components/Users.vue';
 
 
 Vue.config.productionTip = false;
@@ -15,17 +16,15 @@ Vue.use(VueRouter)
 var router = new VueRouter ({
 	mode: 'history',
 	routes: [
-		//{path: '/', component: Personal},
-		{path: '/detail-page/:id', name: 'item', component: DetailPage},
+		{path: '/detail-page/:id', name: 'detail-page', component: DetailPage},
 		{path: '/', component: App}
 	]
 })
 
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
-  router: router
+  router: router,
 });

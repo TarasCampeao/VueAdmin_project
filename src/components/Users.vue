@@ -4,7 +4,7 @@
 	      <input class="find_element" type="text" name="search" placeholder="Search" @input="filteredInfo">
 		</div>
 		<div class="items_box">
-			<div class="about_zone" v-for="item in items" :key="item.id">
+			<div class="about_zone" v-for="(item, index) in items" :key="item.id">
 			  <div class="main_data">
 			      <ul class="info_list">
 			        <li>{{ item.name }}</li>
@@ -13,7 +13,7 @@
 			      </ul>
 			      <div class="btn_group">
 			        <button class="btn_standard edit_btn">Edit</button>
-			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: item.id } }">See more</router-link>
+			        <router-link class="btn_standard see_more" :to="{ name: 'detail-page', params: { id: index } }">See more</router-link>
 			      </div>
 		      </div>
 		    </div>

@@ -1,10 +1,11 @@
 <template>
-	<div v-if="item">
+	<div class="item" v-if="item">
 		<div>Name item: {{ item.name }}</div>
 		<div>Location item: {{ item.location }}</div>
 		<div>Currency item: {{ item.currency }}</div>
-		<div class="all_info">{{ item.info }}</div>
+		<!-- <div class="all_info">{{ item.info }}</div> -->
 		<router-link to="/">Back to main page</router-link>
+		<div>werertert</div>
 	</div>
 </template>
 
@@ -22,7 +23,6 @@ export default {
 	},
 	created: function() {
 		var postID = this.$route.params.id
-
 		this.item = this.items[postID]
 	}
 }
