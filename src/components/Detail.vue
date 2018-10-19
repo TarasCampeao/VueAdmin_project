@@ -1,9 +1,9 @@
 <template>
 	<div class="container">
 		<div class="info_item" v-if="item">
-			<div>Name item: {{ item.name }}</div>
-			<div>Location item: {{ item.location }}</div>
-			<div>Currency item: {{ item.currency }}</div>
+			<div><span>Name:</span> {{ item.name }}</div>
+			<div><span>Location:</span> {{ item.location }}</div>
+			<div><span>Currency:</span> {{ item.currency }}</div>
 			<!-- <div class="all_info">{{ item.info }}</div> -->
 		</div>
 		<router-link to="/" class="back_btn">Back to main page</router-link>
