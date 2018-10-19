@@ -23,10 +23,10 @@ export default {
 		}
 	},
 	created() {
-		var itemID = this.$route.params.id
+		var itemID = this.$route.params['id']
 
 		this.item = this.items[itemID]
-	}
+	},
 }
 
 </script>
