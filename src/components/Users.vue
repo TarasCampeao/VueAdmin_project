@@ -13,7 +13,7 @@
 			      </ul>
 			      <div class="btn_group">
 			        <button class="btn_standard edit_btn">Edit</button>
-			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: index } }">See more</router-link>
+			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: index }, query: {id: item.id } }">See more</router-link>
 			      </div>
 		      </div>
 		    </div>
