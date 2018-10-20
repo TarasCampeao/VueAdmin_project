@@ -33,14 +33,14 @@ export default {
 	},
 	data() {
 		return {
-			items: fetchData.slice(0, 5),
-			total: fetchData.slice(0, 5).reduce((sum, item) => sum + item.currency, 0)
+			items: fetchData,
+			total: fetchData.reduce((sum, item) => sum + item.currency, 0)
 		}
 	},
 	methods: {
 	    filteredInfo(e) {
 	      const value = e.target.value.toLowerCase();
-	      this.items = fetchData.slice(0, 5).filter(el =>
+	      this.items = fetchData.filter(el =>
 	        el.name.toLowerCase().search(value) + 1 || el.location.toLowerCase().search(value) + 1);
 	      this.total = this.fetchData.reduce((sum, item) => sum + item.currency, 0);
 	    },
