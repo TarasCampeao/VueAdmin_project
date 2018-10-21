@@ -4,9 +4,9 @@
 	      <input class="find_element" type="text" name="search" placeholder="Search" @input="filteredInfo">
 		</div>
 		<div class="sort_group">
-			<button @click="sortByName( 'name' )">Name</button>
-			<button @click="sortByLocation( 'location' )">Location</button>
-			<button @click="sortByCurrency( 'currency' )">Currency</button>
+			<button @click="sortByName()">Name</button>
+			<button @click="sortByLocation()">Location</button>
+			<button @click="sortByCurrency()">Currency</button>
 		</div>
 		<div class="items_box">
 			<div class="about_zone" v-for="(item, index) in items" :key="item.id">
@@ -49,8 +49,6 @@ export default {
 	        el.name.toLowerCase().search(value) + 1 || el.location.toLowerCase().search(value) + 1);
 	      this.total = this.fetchData.reduce((sum, item) => sum + item.currency, 0);
 	    },
-	},
-	computed: {
 	  sortByName() {
 	    function compare(a, b) {
 	      if (a.name < b.name)
@@ -59,20 +57,20 @@ export default {
 	        return 1;
 	      return 0;
 	    }
-
 	    return this.items.sort(compare);
 	  },
+
   	  sortByLocation() {
-	    function compare(a, b) {
+	    function compareL(a, b) {
 	      if (a.location < b.location)
 	        return -1;
 	      if (a.location > b.location)
 	        return 1;
 	      return 0;
 	    }
-
-	    return this.items.sort(compare);
+	    return this.items.sort(compareL);
 	  },
+
 	  sortByCurrency() {
 	    function compareC(a, b) {
 	      if (a.currency < b.currency)
@@ -81,9 +79,42 @@ export default {
 	        return 1;
 	      return 0;
 	    }
-
 	    return this.items.sort(compareC);
-	  }
+	  }	    
+	},
+	computed: {
+	  // sortByName() {
+	  //   function compare(a, b) {
+	  //     if (a.name < b.name)
+	  //       return -1;
+	  //     if (a.name > b.name)
+	  //       return 1;
+	  //     return 0;
+	  //   }
+	  //   return this.items.sort(compare);
+	  // },
+
+  	//   sortByLocation() {
+	  //   function compareL(a, b) {
+	  //     if (a.location < b.location)
+	  //       return -1;
+	  //     if (a.location > b.location)
+	  //       return 1;
+	  //     return 0;
+	  //   }
+	  //   return this.items.sort(compareL);
+	  // },
+
+	  // sortByCurrency() {
+	  //   function compareC(a, b) {
+	  //     if (a.currency < b.currency)
+	  //       return -1;
+	  //     if (a.currency > b.currency)
+	  //       return 1;
+	  //     return 0;
+	  //   }
+	  //   return this.items.sort(compareC);
+	  // }
 	}
 }	
 
