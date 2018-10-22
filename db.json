@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "name": "Taras",
+      "location": "Ukraine",
+      "currency": "43024",
+      "id": 1
+    },
+    {
+      "name": "",
+      "location": "",
+      "currency": "",
+      "id": 2
+    },
+    {
+      "name": "",
+      "location": "",
+      "currency": "",
+      "id": 3
+    }
+  ]
+}

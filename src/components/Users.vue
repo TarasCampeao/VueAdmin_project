@@ -1,5 +1,29 @@
 <template>
 	<div class="container">
+		<!-- <edit-form></edit-form> -->
+		<form class="edit_form">
+			<div>
+				<label for="edit_name">Name</label>
+				<input type="text" id="edit_name" class="form_field" v-model="itemName">
+			</div>
+			<div>
+				<label for="edit_name">Location</label>
+				<input type="text" id="edit_location" class="form_field" v-model="itemLocation">
+			</div>
+			<div>
+				<label for="edit_name">Currency</label>
+				<input type="text" id="edit_currency" class="form_field" v-model="itemCurrency">
+			</div>
+			<button class="btn_standard add_user" @click.prevent.once="addUser">Add user</button>
+			<button class="btn_standard add_user" @click.prevent="showUser">Show user</button>
+		</form>
+		<ul>
+			<li v-for="user in users" :key="user.id">
+				<div>{{ user.name }}</div>
+				<div>{{ user.location }}</div>
+				<div>{{ user.currency }}</div>
+			</li>
+		</ul>
 		<div class="search">
 	      <input class="find_element" type="text" name="search" placeholder="Search" @input="filteredInfo">
 		</div>
@@ -28,7 +52,7 @@
 </template>
 
 <script>
-import fetchData from '../api/test.json';
+import fetchData from '../api/test.json'
 import Detail from '../components/Detail.vue'
 
 export default {
@@ -38,6 +62,10 @@ export default {
 	},
 	data() {
 		return {
+			users: [],
+			itemName: '',
+			itemLocation: '',
+			itemCurrency: '',
 			items: fetchData,
 			total: fetchData.reduce((sum, item) => sum + item.currency, 0)
 		}
@@ -80,7 +108,33 @@ export default {
 	      return 0;
 	    }
 	    return this.items.sort(compareC);
-	  }	    
+	  },
+		addUser() {
+			const user = {
+				name: this.itemName,
+				location: this.itemLocation,
+				currency: this.itemCurrency
+			}
+
+			this.$http.post('http://localhost:3000/users', user)
+				.then(response => {
+					return response.json()
+				})
+				.then(newUser => {
+					console.log(newUser)
+				})
+		},
+		showUser() {
+			this.$http.get('http://localhost:3000/users')
+				.then(response => {
+					return response.json()
+				})
+				.then(users => {
+					this.users = users
+				})
+		}
+
+
 	},
 	computed: {
 
