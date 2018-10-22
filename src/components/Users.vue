@@ -17,7 +17,7 @@
 			        <li>{{ item.currency }}</li>
 			      </ul>
 			      <div class="btn_group">
-			        <button class="btn_standard edit_btn">Edit</button>
+			        <!-- <button class="btn_standard edit_btn">Edit</button> -->
 			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: index }, query: {id: item.id } }">See more</router-link>
 			      </div>
 		      </div>
@@ -83,38 +83,7 @@ export default {
 	  }	    
 	},
 	computed: {
-	  // sortByName() {
-	  //   function compare(a, b) {
-	  //     if (a.name < b.name)
-	  //       return -1;
-	  //     if (a.name > b.name)
-	  //       return 1;
-	  //     return 0;
-	  //   }
-	  //   return this.items.sort(compare);
-	  // },
 
-  	//   sortByLocation() {
-	  //   function compareL(a, b) {
-	  //     if (a.location < b.location)
-	  //       return -1;
-	  //     if (a.location > b.location)
-	  //       return 1;
-	  //     return 0;
-	  //   }
-	  //   return this.items.sort(compareL);
-	  // },
-
-	  // sortByCurrency() {
-	  //   function compareC(a, b) {
-	  //     if (a.currency < b.currency)
-	  //       return -1;
-	  //     if (a.currency > b.currency)
-	  //       return 1;
-	  //     return 0;
-	  //   }
-	  //   return this.items.sort(compareC);
-	  // }
 	}
 }	
 

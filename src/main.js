@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
 import router from './routes'
+import store from './store'
 import ErrorPage from './components/ErrorPage'
 
 
@@ -18,5 +19,6 @@ new Vue({
   el: '#app',
   template: '<App/>',
   components: { App },
-  router
+  router,
+  store
 });
