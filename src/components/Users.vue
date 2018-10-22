@@ -1,23 +1,19 @@
 <template>
 	<div class="container">
-		<!-- <edit-form></edit-form> -->
 		<form class="edit_form">
 			<div>
-				<label for="edit_name">Name</label>
-				<input type="text" id="edit_name" class="form_field" v-model="itemName">
+				<input type="text" name="name" placeholder="Name" class="form_field" v-model="itemName">
 			</div>
 			<div>
-				<label for="edit_name">Location</label>
-				<input type="text" id="edit_location" class="form_field" v-model="itemLocation">
+				<input type="text" name="location" placeholder="Location" class="form_field" v-model="itemLocation">
 			</div>
 			<div>
-				<label for="edit_name">Currency</label>
-				<input type="text" id="edit_currency" class="form_field" v-model="itemCurrency">
+				<input type="text" name="currency" placeholder="Currency" class="form_field" v-model.number="itemCurrency">
 			</div>
 			<button class="btn_standard add_user" @click.prevent.once="addUser">Add user</button>
 			<button class="btn_standard add_user" @click.prevent="showUser">Show user</button>
 		</form>
-		<ul>
+		<ul class="local_list">
 			<li v-for="user in users" :key="user.id">
 				<div>{{ user.name }}</div>
 				<div>{{ user.location }}</div>
@@ -77,64 +73,51 @@ export default {
 	        el.name.toLowerCase().search(value) + 1 || el.location.toLowerCase().search(value) + 1);
 	      this.total = this.fetchData.reduce((sum, item) => sum + item.currency, 0);
 	    },
-	  sortByName() {
-	    function compare(a, b) {
-	      if (a.name < b.name)
-	        return -1;
-	      if (a.name > b.name)
-	        return 1;
-	      return 0;
-	    }
-	    return this.items.sort(compare);
-	  },
-
-  	  sortByLocation() {
-	    function compareL(a, b) {
-	      if (a.location < b.location)
-	        return -1;
-	      if (a.location > b.location)
-	        return 1;
-	      return 0;
-	    }
-	    return this.items.sort(compareL);
-	  },
-
-	  sortByCurrency() {
-	    function compareC(a, b) {
-	      if (a.currency < b.currency)
-	        return -1;
-	      if (a.currency > b.currency)
-	        return 1;
-	      return 0;
-	    }
-	    return this.items.sort(compareC);
-	  },
+	    sortByName() {
+	      function compare(a, b) {
+	        if (a.name < b.name)
+	          return -1;
+	        if (a.name > b.name)
+	          return 1;
+	        return 0;
+	      }
+	      return this.items.sort(compare);
+	    },
+  	    sortByLocation() {
+	      function compareL(a, b) {
+	        if (a.location < b.location)
+	          return -1;
+	        if (a.location > b.location)
+	          return 1;
+	        return 0;
+	      }
+	      return this.items.sort(compareL);
+	    },
+	    sortByCurrency() {
+	      function compareC(a, b) {
+	        if (a.currency < b.currency)
+	          return -1;
+	        if (a.currency > b.currency)
+	          return 1;
+	        return 0;
+	      }
+	      return this.items.sort(compareC);
+	    },
 		addUser() {
 			const user = {
 				name: this.itemName,
 				location: this.itemLocation,
 				currency: this.itemCurrency
 			}
-
-			this.$http.post('http://localhost:3000/users', user)
-				.then(response => {
-					return response.json()
-				})
-				.then(newUser => {
-					console.log(newUser)
-				})
+			this.resource.save({}, user)
 		},
 		showUser() {
-			this.$http.get('http://localhost:3000/users')
-				.then(response => {
-					return response.json()
-				})
-				.then(users => {
-					this.users = users
-				})
+			this.resource.get().then(response => response.json())
+			  .then(users => this.users = users)
 		}
-
-
+	},
+	created () {
+		this.resource = this.$resource('http://localhost:3000/users')
 	},
 	computed: {
 
