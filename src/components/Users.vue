@@ -17,6 +17,9 @@
 			        <li>{{ item.currency }}</li>
 			      </ul>
 			      <div class="btn_group">
+			        <button class="delete_btn" @click="removeUser(user, index)">
+			        	<i class="fas fa-trash-alt"></i>
+			        </button>
 			        <!-- <button class="btn_standard edit_btn">Edit</button> -->
 			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: index }, query: {id: item.id } }">See more</router-link>
 			      </div>
@@ -80,7 +83,10 @@ export default {
 	      return 0;
 	    }
 	    return this.items.sort(compareC);
-	  }	    
+	  },
+  	    removeUser(user, index) {
+	    	this.items.splice(index, 1);
+	    },   
 	},
 	computed: {
 
