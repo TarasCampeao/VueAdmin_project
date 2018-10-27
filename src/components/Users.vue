@@ -86,11 +86,8 @@ export default {
 	    }
 	    return this.items.sort(compareC);
 	  },
-  	  //   removeUser(user, index) {
-	    // 	this.items.splice(index, 1);
-	    // },
-	    removeUser() {
-	    	store.commit('removeUser');
+	    removeUser(user, index) {
+	    	this.items.splice(index, 1);
 	    }
 	},
 	computed: {
