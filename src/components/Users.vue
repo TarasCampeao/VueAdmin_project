@@ -33,6 +33,8 @@
 <script>
 import fetchData from '../api/test.json';
 import Detail from '../components/Detail.vue'
+import store from '../store'
+
 
 export default {
 	name: 'Users',
@@ -84,9 +86,12 @@ export default {
 	    }
 	    return this.items.sort(compareC);
 	  },
-  	    removeUser(user, index) {
-	    	this.items.splice(index, 1);
-	    },   
+  	  //   removeUser(user, index) {
+	    // 	this.items.splice(index, 1);
+	    // },
+	    removeUser() {
+	    	store.commit('removeUser');
+	    }
 	},
 	computed: {
 

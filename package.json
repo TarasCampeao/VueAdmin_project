@@ -13,8 +13,10 @@
   "dependencies": {
     "pug": "^2.0.0-rc.4",
     "vue": "^2.5.2",
+    "vue-localstorage": "^0.6.2",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
