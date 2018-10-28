@@ -8,7 +8,8 @@
 			<button @click="sortByLocation()">Location</button>
 			<button @click="sortByCurrency()">Currency</button>
 		</div>
-		<div class="items_box" is="transition-group" name="item">
+		<p v-if="!items.length">No items!</p>
+		<div v-if="items.length" class="items_box" is="transition-group" name="item">
 			<div class="about_zone" v-for="(item, index) in items" :key="item.id">
 			  <div class="main_data">
 			      <ul class="info_list">
@@ -25,8 +26,8 @@
 			      </div>
 		      </div>
 		    </div>
+		    <div class="total" :key="total">Total currency: {{ total }}</div>
 	    </div>
-	    <div class="total">Total currency: {{ total }}</div>
 	</div>
 </template>
 
