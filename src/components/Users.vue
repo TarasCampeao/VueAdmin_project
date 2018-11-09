@@ -13,12 +13,12 @@
 			<div class="about_zone" v-for="(item, index) in items" :key="item.id">
 			  <div class="main_data">
 			      <ul class="info_list">
-			        <li>{{ item.name}}</li>
+			        <li>{{ item.name }}</li>
 			        <li>{{ item.location }}</li>
 			        <li>{{ item.currency }}</li>
 			      </ul>
 			      <div class="btn_group">
-			        <button class="delete_btn" @click="removeUser(user, index)">
+			        <button class="delete_btn" @click="removeUser(item, index)">
 			        	<i class="fas fa-trash-alt"></i>
 			        </button>
 			        <!-- <button class="btn_standard edit_btn">Edit</button> -->
@@ -45,7 +45,7 @@ export default {
 	data() {
 		return {
 			items: fetchData,
-			total: fetchData.reduce((sum, item) => sum + item.currency, 0)
+			total: fetchData.reduce((sum, item) => sum + item.currency, 0),
 		}
 	},
 	methods: {
@@ -87,8 +87,10 @@ export default {
 	    }
 	    return this.items.sort(compareC);
 	  },
-	    removeUser(user, index) {
+	    removeUser(item, index) {
 	    	this.items.splice(index, 1);
+	    	//this.items = JSON.parse(localStorage.getItem('items'));
+	    	//localStorage.setItem('items', JSON.stringify(this.items))
 	    }
 	},
 	computed: {
