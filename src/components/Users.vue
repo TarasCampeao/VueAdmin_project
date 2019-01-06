@@ -3,6 +3,7 @@
 		<div class="search">
 	      <input class="find_element" type="text" name="search" placeholder="Search" @input="filteredInfo">
 		</div>
+		<!-- <form-input></form-input> -->
 		<div class="sort_group">
 			<button @click="sortByName()">Name</button>
 			<button @click="sortByLocation()">Location</button>
@@ -18,9 +19,7 @@
 			        <li>{{ item.currency }}</li>
 			      </ul>
 			      <div class="btn_group">
-			        <button class="delete_btn" @click="removeUser(item, index)">
-			        	<i class="fas fa-trash-alt"></i>
-			        </button>
+			        <button-delete :item="item" @remove="removeFromList(item.id)"></button-delete>
 			        <!-- <button class="btn_standard edit_btn">Edit</button> -->
 			        <router-link class="btn_standard see_more" :to="{ name: 'item', params: { id: index }, query: {id: item.id } }">See more</router-link>
 			      </div>
@@ -32,8 +31,10 @@
 </template>
 
 <script>
-import fetchData from '../api/test.json';
+import fetchData from '../api/test.json'
 import Detail from '../components/Detail.vue'
+import ButtonDelete from '../components/ButtonDelete.vue'
+import FormInput from '../components/FormInput.vue'
 import store from '../store'
 
 
@@ -41,6 +42,8 @@ export default {
 	name: 'Users',
 	components: {
 		Detail,
+		FormInput,
+		ButtonDelete,
 	},
 	data() {
 		return {
@@ -87,15 +90,10 @@ export default {
 	    }
 	    return this.items.sort(compareC);
 	  },
-	    removeUser(item, index) {
-	    	this.items.splice(index, 1);
-	    	//this.items = JSON.parse(localStorage.getItem('items'));
-	    	//localStorage.setItem('items', JSON.stringify(this.items))
-	    }
+       removeFromList(id) {
+	    this.items = this.items.filter(item => item.id !== id)
+	  }
 	},
-	computed: {
-
-	}
 }	
 
 </script>
